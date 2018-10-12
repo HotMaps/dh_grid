@@ -197,10 +197,12 @@ def optimize_dist(threshold, cost_matrix, pow_range_matrix, distance_matrix,
     # print("Connections after additional Connections: %i" %(distance_matrix.size - fix_to_zero_index.shape[0] - n))
 
     m = en.ConcreteModel()
-
+    solver = SolverFactory('glpk')
+    '''
     solver = SolverFactory('gurobi', solver_io='python')
     solver.options["MIPGap"] = 1e-4
     solver.options["BarConvTol"] = 1e-8
+    '''
     # ##########################################################################
     # ########## Sets:
     # ##########################################################################
