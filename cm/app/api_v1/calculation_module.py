@@ -6,6 +6,7 @@ if path not in sys.path:
 from ..helper import generate_output_file_tif
 from ..helper import generate_output_file_shp
 from ..helper import generate_output_file_csv
+from ..helper import create_zip_shapefiles
 import my_calculation_module_directory.CM.CM_TUW23.run_cm as CM23
 
 
@@ -95,6 +96,10 @@ def calculation(output_directory, inputs_raster_selection, inputs_parameter_sele
             )
 
     result = dict()
+    out_shp_prelabel = create_zip_shapefiles(output_directory, out_shp_prelabel)
+    out_shp_label = create_zip_shapefiles(output_directory, out_shp_label)
+    out_shp_edges = create_zip_shapefiles(output_directory, out_shp_edges)
+    out_shp_nodes = create_zip_shapefiles(output_directory, out_shp_nodes)
     result['name'] = 'CM District Heating Grid Investment'
     result["raster_layers"]=[{"name": "district heating coherent areas","path": out_raster_maxDHdem},
           {"name": "district heating coherent areas","path": out_raster_invest_Euro},

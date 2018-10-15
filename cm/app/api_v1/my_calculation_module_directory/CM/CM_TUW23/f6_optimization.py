@@ -203,6 +203,7 @@ def optimize_dist(threshold, cost_matrix, pow_range_matrix, distance_matrix,
     solver.options["MIPGap"] = 1e-4
     solver.options["BarConvTol"] = 1e-8
     '''
+
     # ##########################################################################
     # ########## Sets:
     # ##########################################################################
