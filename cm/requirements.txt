@@ -9,7 +9,7 @@ Werkzeug==0.14
 coverage==3.7.1
 httpie==0.8.0
 itsdangerous==0.24
-python-dateuti
+python-dateutil
 gunicorn==19.7.1
 requests==2.3.0
 six==1.10.0
