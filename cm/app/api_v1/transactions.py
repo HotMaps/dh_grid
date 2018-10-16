@@ -7,7 +7,7 @@ import requests
 import logging
 import os
 from flask import send_from_directory
-
+from ..helper import validateJSON
 from app import constant
 
 from app.api_v1 import errors
@@ -130,11 +130,11 @@ def compute():
 
     #TODO CM Developper do not need to change anything here
     # here is the inputs layers and parameters
-    inputs_raster_selection = helper.validateJSON(data["inputs_raster_selection"])
+    inputs_raster_selection = validateJSON(data["inputs_raster_selection"])
     print ('inputs_raster_selection', inputs_raster_selection)
     LOGGER.info('inputs_raster_selection', inputs_raster_selection)
 
-    inputs_parameter_selection = helper.validateJSON(data["inputs_parameter_selection"])
+    inputs_parameter_selection = validateJSON(data["inputs_parameter_selection"])
     print ('inputs_parameter_selection', inputs_parameter_selection)
     LOGGER.info('inputs_parameter_selection', inputs_parameter_selection)
 

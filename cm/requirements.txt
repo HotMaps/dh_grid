@@ -20,3 +20,8 @@ scipy
 pandas
 networkx
 pyomo
+
+ijson
+glpk
+libchebipy
+subliminal-py
