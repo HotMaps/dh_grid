@@ -4,7 +4,7 @@
 #
 
 
-FROM ggeographica/gdal2:2.3.2
+FROM geographica/gdal2:latest
 
 
 MAINTAINER lesly Houndole <lesly.houndole@crem.ch>
