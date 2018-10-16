@@ -1,6 +1,6 @@
 version: "3"
 services:
-  cm:
+  dh_grid:
     build:
       context: ./cm
       dockerfile: Dockerfile
