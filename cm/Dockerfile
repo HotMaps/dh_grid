@@ -28,6 +28,7 @@ RUN apt-get update \
     wget \
     gdal-bin \
     ca-certificates \
+    curl \
     gcc \
     git \
     libpq-dev \
