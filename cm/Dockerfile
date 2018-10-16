@@ -36,7 +36,6 @@ RUN apt-get update \
     python-gdal \
     make \
     python-pip \
-    glpk \
     ssh \
     && apt-get autoremove \
     && apt-get clean
