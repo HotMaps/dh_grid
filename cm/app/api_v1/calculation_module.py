@@ -103,12 +103,12 @@ def calculation(output_directory, inputs_raster_selection, inputs_parameter_sele
     out_shp_edges = create_zip_shapefiles(output_directory, out_shp_edges)
     out_shp_nodes = create_zip_shapefiles(output_directory, out_shp_nodes)
     result['name'] = 'CM District Heating Grid Investment'
-    result["raster_layers"]=[{"name": "district heating coherent areas","path": out_raster_maxDHdem},
-          {"name": "district heating coherent areas","path": out_raster_invest_Euro},
-          {"name": "district heating coherent areas","path": out_raster_hdm_last_year},
-          {"name": "district heating coherent areas","path": out_raster_dist_pipe_length},
-          {"name": "district heating coherent areas","path": out_raster_coh_area_bool},
-          {"name": "district heating coherent areas","path": out_raster_labels}]
+    result["raster_layers"]=[{"name": "district heating coherent areas","path": out_raster_maxDHdem, "type": "none", "legend": []},
+          {"name": "district heating coherent areas","path": out_raster_invest_Euro, "type": "none", "legend": []},
+          {"name": "district heating coherent areas","path": out_raster_hdm_last_year, "type": "none", "legend": []},
+          {"name": "district heating coherent areas","path": out_raster_dist_pipe_length, "type": "none", "legend": []},
+          {"name": "district heating coherent areas","path": out_raster_coh_area_bool, "type": "none", "legend": []},
+          {"name": "district heating coherent areas","path": out_raster_labels, "type": "none", "legend": []}]
     
     result["vector_layers"]=[{"name": "shapefile of coherent areas with their potential","path": out_shp_prelabel},
           {"name": "shapefile of coherent areas with their potential","path": out_shp_label},
