@@ -41,17 +41,17 @@ def calculation(output_directory, inputs_raster_selection, inputs_parameter_sele
     # input parameters
     investment_start_year = inputs_parameter_selection["investment_start_year"]
     investment_last_year = inputs_parameter_selection["investment_last_year"]
-    depreciation_time = inputs_parameter_selection["depreciation_time"]
-    accumulated_energy_saving = inputs_parameter_selection["accumulated_energy_saving"]
-    dh_connection_rate_first_year = inputs_parameter_selection["dh_connection_rate_first_year"]
-    dh_connection_rate_last_year = inputs_parameter_selection["dh_connection_rate_last_year"]
-    interest_rate = inputs_parameter_selection["interest_rate"]
-    grid_cost_ceiling = inputs_parameter_selection["grid_cost_ceiling"]
+    depreciation_time = int(inputs_parameter_selection["depreciation_time"])
+    accumulated_energy_saving = float(inputs_parameter_selection["accumulated_energy_saving"])
+    dh_connection_rate_first_year = float(inputs_parameter_selection["dh_connection_rate_first_year"])
+    dh_connection_rate_last_year = float(inputs_parameter_selection["dh_connection_rate_last_year"])
+    interest_rate = float(inputs_parameter_selection["interest_rate"])
+    grid_cost_ceiling =int(inputs_parameter_selection["grid_cost_ceiling"])
     
     
     # input raster layers: (gfa:= gross floor area; hdm:= heat density map)
-    in_raster_gfa = inputs_raster_selection["gfa_tot_curr_density"]
-    in_raster_hdm = inputs_raster_selection["heat_tot_curr_density"]
+    in_raster_gfa = inputs_raster_selection["gross_floor_area"]
+    in_raster_hdm = inputs_raster_selection["heat"]
     
     # output raster layers
     out_raster_maxDHdem = generate_output_file_tif(output_directory)
