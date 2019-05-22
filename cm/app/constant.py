@@ -79,6 +79,69 @@ INPUTS_CALCULATION_MODULE = [
                'input_min': 0,
                'input_max': 200,
                'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost constant - Inner city',
+               'input_type': 'range',
+               'input_parameter_name': 'c1_innercity',
+               'input_value': 292.38,
+               'input_unit': 'EUR/m',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost constant - Outer city',
+               'input_type': 'range',
+               'input_parameter_name': 'c1_outercity',
+               'input_value': 218.78,
+               'input_unit': 'EUR/m',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost constant - Park',
+               'input_type': 'range',
+               'input_parameter_name': 'c1_park',
+               'input_value': 154.37,
+               'input_unit': 'EUR/m',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost coefficient - Inner city',
+               'input_type': 'range',
+               'input_parameter_name': 'c2_innercity',
+               'input_value': 2067.13,
+               'input_unit': 'EUR/m2',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost coefficient - Outer city',
+               'input_type': 'range',
+               'input_parameter_name': 'c2_outercity',
+               'input_value': 1763.5,
+               'input_unit': 'EUR/m2',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Construction cost coefficient - Park',
+               'input_type': 'range',
+               'input_parameter_name': 'c2_park',
+               'input_value': 1408.76,
+               'input_unit': 'EUR/m2',
+               'input_min': 0,
+               'input_max': 100000,
+               'cm_id': CM_ID
+               },
+               {'input_name': 'Full load hours',
+               'input_type': 'range',
+               'input_parameter_name': 'full_load_hours',
+               'input_value': 3000,
+               'input_unit': 'h',
+               'input_min': 0,
+               'input_max': 8760,
+               'cm_id': CM_ID
                }
               ]
 
@@ -93,7 +156,7 @@ SIGNATURE = {
         "heat","gross_floor_area"
     ],
     "cm_url": "Do not add something",
-    "cm_description": "this computation module can be used for DH grid investment studies.",
+    "cm_description": "this computation module can be used for the economic assessment of DH potential and DH grid investment.",
     "cm_id": CM_ID,
     'inputs_calculation_module': INPUTS_CALCULATION_MODULE
 }

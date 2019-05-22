@@ -59,11 +59,11 @@ def pre_opt(depreciation_time, interest_rate, grid_cost_ceiling,
                        'heat demand total 1st year [MWh]': heat_dem_coh_1st,
                        'heat demand total last year [MWh]': heat_dem_coh_last,
                        'max potential district heating through investment period [MWh]': q,
-                       'specific heat demand total 1st year [MWh/km2]': heat_dem_spec_area,
+                       'specific heat demand total 1st year [MWh/ha]': heat_dem_spec_area,
                        'distribution line length [km]': dist_pipe_len,
-                       'distribution costs [EUR]': q_inv,
+                       'distribution costs - annualized [EUR]': q_inv,
                        'distribution costs [EUR/MWh]': q_spec_cost,
-                       'area [km2]': area_coh_area
+                       'area [ha]': area_coh_area
                        })
     '''
     Dimension DN Water flow m/s Capacity MW Cost EUR/m
@@ -94,8 +94,8 @@ def pre_opt(depreciation_time, interest_rate, grid_cost_ceiling,
     headers = ['label', 'heat demand total 1st year [MWh]',
                'heat demand total last year [MWh]',
                'distribution costs [EUR/MWh]',
-               'specific heat demand total 1st year [MWh/km2]',
-               'distribution costs [EUR]', 'area [km2]',
+               'specific heat demand total 1st year [MWh/ha]',
+               'distribution costs - annualized [EUR]', 'area [ha]',
                'distribution line length [km]', grid_cost_header]
     df = df[headers]
     df.to_csv(out_csv_solution)
